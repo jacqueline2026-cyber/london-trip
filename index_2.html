@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="9月11日至14日的伦敦逐日行程：Big Bus 48 小时用法、游船、导航链接与实用信息。">
+  <meta name="theme-color" content="#FDFCFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13171B" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="伦敦四日">
+  <meta name="robots" content="noindex, nofollow">
+  <title>伦敦母女四日</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F1EC;&#x1F1E7;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#FDFCFA; --surface:#FFFFFF; --surface-2:#F4F2EE;
+  --ink:#1A2028; --ink-soft:#5A6672; --ink-faint:#8B95A0;
+  --accent:#C4342B; --line:#E3DFD8; --line-soft:#EFECE6;
+  --warn-bg:#FDF4E7; --warn-line:#E4C48E; --warn-ink:#8A5A12;
+  --ok-bg:#EDF7F1; --ok-line:#B9DCC7; --ok-ink:#2E7D4F;
+  --river:#CFE0E8;
+  /* Big Bus route colours */
+  --bus-r:#CC2027; --bus-b:#00659F; --bus-g:#0F8A4D;
+  --tube:#4A5560; --boat:#1B7F8E; --walk:#8B95A0;
+  /* day colours on the map */
+  --l1:#6A7278; --l2:#CC2027; --l3:#00659F; --l4:#8A5A12;
+  --display:"Newsreader","Songti SC","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#13171B; --surface:#1B2127; --surface-2:#232B32;
+    --ink:#E9E7E2; --ink-soft:#9AA4AE; --ink-faint:#727E89;
+    --accent:#E8756A; --line:#2C343C; --line-soft:#242C33;
+    --warn-bg:#2B2317; --warn-line:#5C4A26; --warn-ink:#E0B978;
+    --ok-bg:#1B2A22; --ok-line:#2A4437; --ok-ink:#7DCB9C;
+    --river:#25404C;
+    --bus-r:#F06E6E; --bus-b:#5AA8DC; --bus-g:#5FBE88;
+    --tube:#95A1AC; --boat:#5FBECB; --walk:#727E89;
+    --l1:#96A0A8; --l2:#F06E6E; --l3:#5AA8DC; --l4:#E0B978;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#13171B; --surface:#1B2127; --surface-2:#232B32;
+  --ink:#E9E7E2; --ink-soft:#9AA4AE; --ink-faint:#727E89;
+  --accent:#E8756A; --line:#2C343C; --line-soft:#242C33;
+  --warn-bg:#2B2317; --warn-line:#5C4A26; --warn-ink:#E0B978;
+  --ok-bg:#1B2A22; --ok-line:#2A4437; --ok-ink:#7DCB9C;
+  --river:#25404C;
+  --bus-r:#F06E6E; --bus-b:#5AA8DC; --bus-g:#5FBE88;
+  --tube:#95A1AC; --boat:#5FBECB; --walk:#727E89;
+  --l1:#96A0A8; --l2:#F06E6E; --l3:#5AA8DC; --l4:#E0B978;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+
+.masthead{padding-block:40px 20px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 13px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(36px,9.5vw,54px);line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .en{display:block;font-style:italic;font-weight:400;font-size:.44em;letter-spacing:.01em;color:var(--ink-soft);margin-top:9px}
+
+.now{margin-block:22px 0;border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--surface);border-radius:4px;padding:16px 18px}
+.now .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:9px}
+.now .ev{font-size:18px;font-weight:600;line-height:1.4;margin-bottom:3px;text-wrap:balance}
+.now .when{font-size:13.5px;color:var(--ink-soft);font-family:var(--mono);font-variant-numeric:tabular-nums;margin-bottom:12px}
+.cd{display:flex;border-top:1px solid var(--line-soft);padding-top:12px}
+.cd div{flex:1}
+.cd .n{font-family:var(--mono);font-size:27px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.02em;display:block}
+.cd .u{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.now.over{border-left-color:var(--ok-ink)}
+.now.over .lbl{color:var(--ok-ink)}
+
+/* ticket panel */
+.ticket{margin-block:26px 0;border:1px solid var(--line);border-radius:4px;background:var(--surface);overflow:hidden}
+.ticket .hd{padding:15px 18px 13px;border-bottom:1px solid var(--line-soft)}
+.ticket .hd h2{font-family:var(--display);font-size:23px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
+.ticket .hd p{margin:0;font-size:13.5px;color:var(--ink-soft)}
+.fire{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--warn-bg);border-bottom:1px solid var(--line-soft)}
+.fire .big{font-family:var(--mono);font-size:17px;font-weight:600;color:var(--warn-ink);white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1.5}
+.fire .tx{font-size:14px;line-height:1.65}
+.fire .tx b{font-weight:600}
+.routes{display:grid;gap:1px;background:var(--line-soft)}
+.rt{background:var(--surface);padding:13px 18px;display:grid;grid-template-columns:auto 1fr;gap:3px 12px;align-items:baseline}
+.rt .nm{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--c);border-radius:3px;padding:3px 8px;white-space:nowrap;grid-row:1/3}
+.rt .cover{font-size:14.5px;line-height:1.6;color:var(--ink)}
+.rt .meta{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+/* nav */
+nav.days{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px;margin-top:26px}
+.days-scroll{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+.days-scroll::-webkit-scrollbar{display:none}
+.daylink{flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink-soft);text-decoration:none;font-size:13px;font-weight:500;white-space:nowrap;transition:color .15s,border-color .15s}
+.daylink:hover{color:var(--ink);border-color:var(--ink-faint)}
+.daylink .dot{width:7px;height:7px;border-radius:999px;background:var(--c);flex:0 0 auto}
+.daylink.on{color:var(--ink);border-color:var(--ink);font-weight:600}
+.daylink:focus-visible,.map:focus-visible,.allroute:focus-visible,.bk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* map */
+.overview{margin-block:30px 0}
+.overview h2,.facts h2,.booked h2,.todo h2{font-family:var(--display);font-size:26px;font-weight:600;margin:0 0 4px;letter-spacing:-.01em}
+.overview .sub,.facts .sub,.booked .sub,.todo .sub{color:var(--ink-soft);font-size:14.5px;margin:0 0 16px}
+.mapbox{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface);padding:12px}
+.mapbox svg{display:block;min-width:760px;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12.5px;color:var(--ink-soft)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:16px;height:3px;border-radius:2px;background:var(--c);display:block}
+
+/* alerts */
+.alerts{display:flex;flex-direction:column;gap:12px;margin-block:30px}
+.alert{border:1px solid var(--warn-line);background:var(--warn-bg);border-radius:4px;padding:14px 16px;font-size:14.5px;line-height:1.65;color:var(--ink)}
+.alert > b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--warn-ink);margin-bottom:6px;font-weight:600}
+.alert.plain{border-color:var(--line);background:var(--surface-2)}
+.alert.plain > b{color:var(--ink-faint)}
+.alert p{margin:0}
+.alert p + p{margin-top:8px}
+
+/* booked */
+.booked{margin-block:34px 0;padding-top:30px;border-top:1px solid var(--line)}
+.bkgrid{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.bkrow{background:var(--surface);padding:13px 15px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:start}
+.bkrow .t{font-family:var(--mono);font-size:12px;color:var(--ink-faint);font-variant-numeric:tabular-nums;grid-column:1/-1;letter-spacing:.03em}
+.bkrow .n{font-weight:600;font-size:15.5px}
+.bkrow .a{font-size:13.5px;color:var(--ink-soft);grid-column:1;line-height:1.6}
+.bkrow .s{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ok-ink);background:var(--ok-bg);border:1px solid var(--ok-line);border-radius:3px;padding:2px 7px;grid-row:2;grid-column:2;white-space:nowrap}
+
+/* tickets to buy */
+.buy{margin-block:34px 0;padding-top:30px;border-top:1px solid var(--line)}
+.buy h2{font-family:var(--display);font-size:26px;font-weight:600;margin:0 0 4px;letter-spacing:-.01em}
+.buy .sub{color:var(--ink-soft);font-size:14.5px;margin:0 0 20px}
+.grp{margin-top:22px}
+.grp > h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px;font-weight:600;color:var(--k)}
+.grp > .note{margin:-6px 0 10px;font-size:13.5px;color:var(--ink-soft)}
+.tk{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.tkrow{background:var(--surface);padding:13px 15px;display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center}
+.tkrow .nm{font-weight:600;font-size:15.5px;line-height:1.4;grid-column:1}
+.tkrow .pr{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink);text-align:right;white-space:nowrap;grid-column:2}
+.tkrow .pr small{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.02em}
+.tkrow .de{grid-column:1/-1;font-size:13.5px;color:var(--ink-soft);line-height:1.62;margin:0}
+.tkrow .de b{color:var(--ink);font-weight:600}
+.tkrow .go{margin:2px 0 0;grid-column:1/-1}
+.tkrow .bk{margin:2px 0 0}
+.total{margin-top:14px;padding:12px 15px;border:1px dashed var(--line);border-radius:4px;font-size:13.5px;color:var(--ink-soft);line-height:1.65}
+.total b{color:var(--ink);font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+.nofee{margin-top:22px;padding:14px 16px;background:var(--ok-bg);border:1px solid var(--ok-line);border-radius:4px;font-size:14px;line-height:1.7;color:var(--ink)}
+.nofee b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ok-ink);margin-bottom:6px;font-weight:600}
+
+/* day */
+.day{padding-block:34px 8px;border-top:1px solid var(--line);scroll-margin-top:58px}
+.dayhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.daynum{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--c);border-bottom:2px solid var(--c);padding-bottom:2px}
+.daydate{font-family:var(--display);font-size:27px;font-weight:600;letter-spacing:-.01em}
+.dayweek{font-size:14px;color:var(--ink-faint);font-family:var(--mono)}
+.daytheme{margin:0 0 14px;color:var(--ink-soft);font-size:15px;max-width:58ch}
+.day.today .daydate{color:var(--accent)}
+.todaytag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--accent);padding:2px 7px;border-radius:3px;font-weight:600}
+.allroute{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:7px 12px;margin-bottom:22px;transition:border-color .15s}
+.allroute:hover{border-color:var(--c)}
+.allroute::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--c)}
+
+/* stops */
+ol.stops{list-style:none;margin:0;padding:0}
+.stop{display:grid;grid-template-columns:56px 1fr;gap:0 16px;padding-block:17px;border-top:1px solid var(--line-soft)}
+.stop:first-child{border-top:none;padding-top:0}
+.time{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:14px;font-weight:500;color:var(--ink);letter-spacing:-.01em;padding-top:2px}
+.txt{min-width:0}
+.txt h4{margin:0 0 7px;font-size:17px;font-weight:600;line-height:1.42;letter-spacing:-.005em;text-wrap:balance}
+.txt p{margin:0 0 8px;font-size:14.5px;color:var(--ink-soft);line-height:1.72}
+.txt p:last-child{margin-bottom:0}
+.txt .lede{color:var(--ink)}
+
+/* how to get there */
+.go{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 9px}
+.go span{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;border:1px solid var(--line);border-radius:3px;padding:3px 8px;color:var(--ink-soft);background:var(--surface)}
+.go span::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--m);flex:0 0 auto}
+.go .bus-r{--m:var(--bus-r);color:var(--bus-r);border-color:var(--bus-r)}
+.go .bus-b{--m:var(--bus-b);color:var(--bus-b);border-color:var(--bus-b)}
+.go .bus-g{--m:var(--bus-g);color:var(--bus-g);border-color:var(--bus-g)}
+.go .tube{--m:var(--tube)}
+.go .boat{--m:var(--boat);color:var(--boat);border-color:var(--boat)}
+.go .walk{--m:var(--walk)}
+.go .walk::before{border-radius:999px}
+
+.map{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.05em;color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;white-space:nowrap;margin-left:7px}
+.map:hover{color:var(--accent);border-color:var(--accent)}
+.bk{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:3px;padding:4px 9px;margin:9px 6px 0 0;transition:border-color .15s,color .15s}
+.bk:hover{color:var(--accent);border-color:var(--accent)}
+.heads{margin-top:10px;border-left:2px solid var(--c);padding:2px 0 2px 12px;font-size:14px;color:var(--ink-soft)}
+.heads b{color:var(--ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-soft);background:var(--surface-2);border:1px solid var(--line-soft);border-radius:3px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.tag.free{color:var(--ok-ink);border-color:var(--ok-line);background:var(--ok-bg)}
+.tag.book{color:var(--warn-ink);border-color:var(--warn-line);background:var(--warn-bg)}
+.eats{margin-top:10px;display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+.eat{background:var(--surface);padding:9px 12px;display:flex;gap:10px;align-items:baseline;font-size:14px;flex-wrap:wrap}
+.eat .n{font-weight:600;color:var(--ink)}
+.eat .d{color:var(--ink-soft);flex:1;min-width:150px}
+.eat .p{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+
+/* todo */
+.todo{margin-block:34px 0;padding-top:30px;border-top:1px solid var(--line)}
+ul.tdlist{list-style:none;margin:16px 0 0;padding:0}
+ul.tdlist li{padding:11px 0 11px 22px;border-top:1px solid var(--line-soft);font-size:14.5px;color:var(--ink-soft);position:relative;line-height:1.68}
+ul.tdlist li::before{content:"";position:absolute;left:2px;top:20px;width:6px;height:6px;border-radius:999px;border:1.5px solid var(--ink-faint)}
+ul.tdlist li b{color:var(--ink);font-weight:600}
+ul.tdlist li.urgent::before{background:var(--accent);border-color:var(--accent)}
+
+.facts{padding-block:30px 0;border-top:1px solid var(--line);margin-top:34px}
+dl.kv{margin:16px 0 0;display:flex;flex-direction:column}
+dl.kv > div{display:grid;grid-template-columns:92px 1fr;gap:4px 16px;padding-block:13px;border-top:1px solid var(--line-soft)}
+dl.kv dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+dl.kv dd{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.7}
+dl.kv dd b{color:var(--ink);font-weight:600}
+
+footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--ink-faint);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:430px){
+  .wrap{padding-inline:16px}
+  nav.days{margin-inline:-16px;padding-inline:16px}
+  .stop{grid-template-columns:48px 1fr;gap:0 12px}
+  dl.kv > div{grid-template-columns:1fr;gap:2px}
+  dl.kv dt{padding-top:0}
+  h1{font-size:34px}
+  .cd .n{font-size:23px}
+  .rt{grid-template-columns:1fr;gap:6px}
+  .rt .nm{grid-row:auto;justify-self:start}
+  .fire{flex-direction:column;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="kicker">9月11日 — 9月14日 · 住一区 · 两个人 · Big Bus 48 小时</p>
+  <h1>伦敦母女四日<span class="en">Four Days, Mum &amp; Me</span></h1>
+</header>
+
+<section class="now" id="nowcard" aria-live="polite">
+  <div class="lbl">此刻关注</div>
+  <div class="ev" id="nowEv">行程即将开始</div>
+  <div class="when" id="nowWhen">—</div>
+  <div class="cd" id="nowCd">
+    <div><span class="n" id="cdD">—</span><span class="u">天</span></div>
+    <div><span class="n" id="cdH">—</span><span class="u">时</span></div>
+    <div><span class="n" id="cdM">—</span><span class="u">分</span></div>
+    <div><span class="n" id="cdS">—</span><span class="u">秒</span></div>
+  </div>
+</section>
+
+<section class="ticket">
+  <div class="hd">
+    <h2>Big Bus 48 小时怎么用</h2>
+    <p>倒计时从你在 app 里按下 Activate 那一刻开始，不是按自然日。</p>
+  </div>
+  <div class="fire">
+    <div class="big">9/12 周六<br>12:30</div>
+    <div class="tx"><b>建议在这个时刻激活</b>，48 小时正好走到 <b>9/14 周一 12:30</b>。这样周六下午红线、周日整天蓝线、周一上午回程红线，三段全吃到。西敏寺那两个多小时不要浪费在倒计时里，出了教堂门再按。</div>
+  </div>
+  <div class="routes">
+    <div class="rt" style="--c:var(--bus-r)">
+      <span class="nm">红线</span>
+      <span class="cover">Hard Rock Cafe（起点）· 大理石拱门 · 特拉法加 · 伦敦眼 · 柯芬园 · 圣保罗 · 伦敦塔 · 西敏码头 · 白金汉宫 · Victoria</span>
+      <span class="meta">08:30 首班 · 17:45 末班 · 一圈 2.5 小时 · 每 15–20 分钟</span>
+    </div>
+    <div class="rt" style="--c:var(--bus-b)">
+      <span class="nm">蓝线</span>
+      <span class="cover">贝克街 · 海德公园角 · 南肯辛顿博物馆区 · Harrods · 肯辛顿宫 · 诺丁山 · 兰开斯特门 · 帕丁顿 · Victoria · 伦敦眼</span>
+      <span class="meta">10:34 首班 · 20:08 末班 · 一圈 3.5 小时 · 每 20 分钟</span>
+    </div>
+    <div class="rt" style="--c:var(--bus-g)">
+      <span class="nm">绿线</span>
+      <span class="cover">国王十字 · 圣潘克拉斯 · 尤斯顿 · 大英博物馆 · 柯芬园</span>
+      <span class="meta">08:30 首班 · 18:00 末班 · 一圈 1 小时 10 分 · 每 45 分钟</span>
+    </div>
+    <div class="rt" style="--c:var(--boat)">
+      <span class="nm">游船</span>
+      <span class="cover">单程券，只能坐一次。西敏码头 ↔ 塔桥码头，约 40 分钟，City Cruises 运营，上船前给工作人员看票就行，不用换实体票。</span>
+      <span class="meta">安排在 9/12 中午 · 淡季末班很早，别留到傍晚</span>
+    </div>
+  </div>
+</section>
+
+<nav class="days" aria-label="按天跳转">
+  <div class="days-scroll">
+    <a class="daylink" href="#d1" data-date="2026-09-11" style="--c:var(--l1)"><span class="dot"></span>周五 · 西区</a>
+    <a class="daylink" href="#d2" data-date="2026-09-12" style="--c:var(--l2)"><span class="dot"></span>周六 · 西敏寺+船</a>
+    <a class="daylink" href="#d3" data-date="2026-09-13" style="--c:var(--l3)"><span class="dot"></span>周日 · 蓝线</a>
+    <a class="daylink" href="#d4" data-date="2026-09-14" style="--c:var(--l4)"><span class="dot"></span>周一 · 伦敦塔</a>
+  </div>
+</nav>
+
+<section class="overview">
+  <h2>四天走过的地方</h2>
+  <p class="sub">按真实经纬度画的示意图。泰晤士河那道弯是认路的锚——西边是白金汉宫和南肯辛顿，东边是金融城和伦敦塔。手机上左右滑动看全图。</p>
+  <div class="mapbox">
+    <svg viewBox="0 0 1000 560" role="img" aria-label="伦敦四日行程路线示意图">
+      <path d="M 400 545 C 460 490 490 470 504 436 C 520 395 532 378 546 360 C 600 338 640 332 663 333 L 721 333 C 770 335 800 340 817 347 L 867 347 C 890 350 905 365 913 386 C 925 405 945 375 985 362"
+            fill="none" stroke="var(--river)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="600" y="318" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="20" fill="var(--ink-faint)">River Thames</text>
+
+      <g fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 9">
+        <path d="M 359 428 L 425 407 L 474 340 L 520 291 L 447 293 L 483 188" stroke="var(--l1)"/>
+        <path d="M 478 454 L 511 427 L 913 373 L 784 373 L 545 403" stroke="var(--l2)"/>
+        <path d="M 378 493 L 269 411 L 161 369 L 296 378 L 72 490" stroke="var(--l3)"/>
+        <path d="M 909 338 L 722 262 L 221 138" stroke="var(--l4)"/>
+      </g>
+
+      <g font-family="IBM Plex Sans, sans-serif" font-size="19" font-weight="500">
+        <g fill="var(--l1)">
+          <circle cx="359" cy="428" r="6"/><text x="359" y="455" text-anchor="middle">白金汉宫</text>
+          <circle cx="425" cy="407" r="5"/><text x="437" y="424">圣詹姆斯公园</text>
+          <circle cx="474" cy="340" r="6"/><text x="462" y="333" text-anchor="end">特拉法加</text>
+          <circle cx="520" cy="291" r="6"/><text x="534" y="297">柯芬园</text>
+          <circle cx="447" cy="293" r="5"/><text x="435" y="276" text-anchor="end">唐人街</text>
+          <circle cx="483" cy="188" r="6"/><text x="483" y="170" text-anchor="middle">大英博物馆</text>
+        </g>
+        <g fill="var(--l2)">
+          <circle cx="478" cy="454" r="6"/><text x="466" y="478" text-anchor="end">西敏寺</text>
+          <circle cx="511" cy="427" r="5"/><text x="525" y="444">西敏码头</text>
+          <circle cx="545" cy="403" r="6"/><text x="559" y="398">伦敦眼</text>
+          <circle cx="784" cy="373" r="6"/><text x="784" y="399" text-anchor="middle">Borough 市场</text>
+          <circle cx="913" cy="373" r="6"/><text x="913" y="399" text-anchor="middle">塔桥</text>
+        </g>
+        <g fill="var(--l3)">
+          <circle cx="378" cy="493" r="6"/><text x="392" y="510">西敏主教座堂</text>
+          <circle cx="269" cy="411" r="6"/><text x="257" y="404" text-anchor="end">惠灵顿拱门</text>
+          <circle cx="161" cy="369" r="5"/><text x="161" y="351" text-anchor="middle">海德公园</text>
+          <circle cx="296" cy="378" r="5"/><text x="308" y="372">Hard Rock</text>
+          <circle cx="72" cy="490" r="6"/><text x="86" y="507">南肯辛顿三馆</text>
+        </g>
+        <g fill="var(--l4)">
+          <circle cx="909" cy="338" r="6"/><text x="897" y="331" text-anchor="end">伦敦塔</text>
+          <circle cx="722" cy="262" r="6"/><text x="722" y="245" text-anchor="middle">圣保罗</text>
+          <circle cx="221" cy="138" r="6"/><text x="221" y="120" text-anchor="middle">贝克街 221b</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="legend">
+    <span style="--c:var(--l1)"><i></i>周五 西区</span>
+    <span style="--c:var(--l2)"><i></i>周六 西敏寺 → 船 → 河东</span>
+    <span style="--c:var(--l3)"><i></i>周日 蓝线 西南一线</span>
+    <span style="--c:var(--l4)"><i></i>周一 伦敦塔 → 贝克街</span>
+  </div>
+</section>
+
+<section class="alerts" aria-label="出行前须知">
+  <div class="alert">
+    <b>妈妈清单里有两个"西敏"，是两个地方</b>
+    <p><strong>Westminster Abbey 西敏寺</strong>在国会大厦旁边，英王加冕那座，票已订好，周六 10:00 进。<strong>Westminster Cathedral 西敏主教座堂</strong>是天主教堂，在 Victoria 站附近，进去免费，钟楼电梯 £10，排在周日上午。两个都去，不冲突，只是别走错门。</p>
+  </div>
+  <div class="alert">
+    <b>周末地铁大面积停运 · 9月12–13日</b>
+    <p>District 线：Tower Hill／Edgware Road 往西到 Ealing Broadway、Kensington (Olympia)、Richmond、Wimbledon 全段无车。Circle 线：Edgware Road 到 Aldgate（经 Victoria）无车。</p>
+    <p>影响最大的是周日的南肯辛顿——South Kensington 站平时靠 District 和 Circle，这两天都停。所以周日整天走 <strong>Big Bus 蓝线</strong>，它正好停在博物馆门口，这也是把蓝线排在周日的原因。真要坐地铁的话，Piccadilly 线也到 South Kensington，正常运行。</p>
+    <p>Jubilee、Northern、Piccadilly、Bakerloo、Victoria、Overground、DLR 全部正常。周一起 District 和 Circle 恢复。</p>
+  </div>
+  <div class="alert plain">
+    <b>这四天的天气和日落</b>
+    <p>白天 20–25°C，晴到多云，几乎不下雨。早晚 13–18°C 会凉，短袖加薄外套刚好。周一最暖 25°C。</p>
+    <p>日落：周五 19:26，周六 19:23，周日 19:21，周一 19:19。周六的伦敦眼就是照着这个时间排的。</p>
+  </div>
+</section>
+
+<section class="booked">
+  <h2>已确认的预订</h2>
+  <p class="sub">出发前对一遍时间地点。确认号、证件号、房间号不写在这里——这是公开网址。</p>
+  <div class="bkgrid">
+    <div class="bkrow">
+      <span class="t">9月12日 周六 · 10:00 入场</span>
+      <span class="n">西敏寺 Westminster Abbey</span>
+      <span class="a">20 Deans Yard, London SW1P 3PA · 09:40 到场过安检</span>
+      <span class="s">已订</span>
+    </div>
+    <div class="bkrow">
+      <span class="t">9月12日 12:30 激活 → 9月14日 12:30 到期</span>
+      <span class="n">Big Bus Essential 48 小时</span>
+      <span class="a">红蓝绿三线 + 单程游船 + 3 场步行导览 · 在 Big Bus app 里输入订单号后按 Activate</span>
+      <span class="s">已订</span>
+    </div>
+  </div>
+</section>
+
+<section class="buy">
+  <h2>要买的票</h2>
+  <p class="sub">四天里所有要花钱或要预约的，按紧急程度排。价格是单人，妈妈如果满 65 岁多处有优惠票价，括号里是优惠价。</p>
+
+  <div class="grp" style="--k:var(--accent)">
+    <h3>今晚就订 · 有时段，会满</h3>
+    <div class="tk">
+      <div class="tkrow">
+        <span class="nm">伦敦眼 London Eye</span>
+        <span class="pr">£29 起<small>现场 £39</small></span>
+        <p class="de"><b>9月12日 周六 18:45–19:15 的时段。</b>日落 19:23，这个时段上去时天还亮，下来时全城灯亮，是周六傍晚最抢手的一档。网上订比现场便宜十镑。</p>
+        <a class="bk" href="https://www.londoneye.com/tickets-and-prices/" target="_blank" rel="noopener">londoneye.com ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">伦敦塔 Tower of London</span>
+        <span class="pr">£37<small>65+ £29.50</small></span>
+        <p class="de"><b>9月14日 周一 09:00 时段。</b>含王冠珠宝。现场和网上同价，但周一开门那一档最先满。5–15 岁 £18.50。含自愿捐赠是 £40.70 / £32.50。</p>
+        <a class="bk" href="https://www.hrp.org.uk/tower-of-london/visit/tickets-and-prices/" target="_blank" rel="noopener">hrp.org.uk ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">西敏寺 · 阁楼加购</span>
+        <span class="pr">£5<small>主票已订</small></span>
+        <p class="de"><b>9月12日 周六，主票之外单加。</b>Queen's Diamond Jubilee Galleries 是单独的定时票，10:00–15:00，从三层俯瞰整个中殿。五镑买一个七百年来只有修士看得到的角度。</p>
+        <a class="bk" href="https://www.westminster-abbey.org/visit-us/prices-and-entry-times" target="_blank" rel="noopener">westminster-abbey.org ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">Hard Rock Cafe 订位</span>
+        <span class="pr">免费<small>订位而已</small></span>
+        <p class="de"><b>9月13日 周日中午。</b>150 Old Park Lane，全世界第一家，周末中午会排长队。订位不要钱，但能省半小时。</p>
+        <a class="bk" href="https://www.hardrockcafe.com/location/london/" target="_blank" rel="noopener">hardrockcafe.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp" style="--k:var(--warn-ink)">
+    <h3>现场买也行 · 先订更稳</h3>
+    <div class="tk">
+      <div class="tkrow">
+        <span class="nm">夏洛克·福尔摩斯博物馆</span>
+        <span class="pr">£19<small>优惠 £17</small></span>
+        <p class="de"><b>9月14日 周一下午。</b>221b Baker Street，每天 9:30–18:00，最后入场 17:30。16 岁以下 £14。楼梯窄，人多时排队上楼，下午三四点最挤。</p>
+        <a class="bk" href="https://www.sherlock-holmes.co.uk/plan-your-visit/" target="_blank" rel="noopener">sherlock-holmes.co.uk ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">惠灵顿拱门 Wellington Arch</span>
+        <span class="pr">£6.80<small>优惠 £5.90</small></span>
+        <p class="de"><b>只能周日去。</b>English Heritage 管理，<b>周三到周日 10:00–17:00，周一周二关门</b>——所以它必须排在周日，挪不动。5–17 岁 £3.60，家庭票（2 大 3 小）£17.20。</p>
+        <a class="bk" href="https://www.english-heritage.org.uk/visit/places/wellington-arch/prices-and-opening-times-at-wellington-arch/" target="_blank" rel="noopener">english-heritage.org.uk ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">西敏主教座堂 · 钟楼电梯</span>
+        <span class="pr">£10<small>优惠 £5</small></span>
+        <p class="de"><b>9月13日 周日上午，现场买。</b>进教堂本身免费，只有钟楼电梯收费。票在教堂商店买，周三到周日 10:30–16:30。家庭票 £22。电梯直上 64 米，不用爬楼梯。</p>
+        <a class="bk" href="https://westminstercathedral.org.uk/the-cathedral/tours/" target="_blank" rel="noopener">westminstercathedral.org.uk ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp" style="--k:var(--ok-ink)">
+    <h3>免费，但建议订个时段票</h3>
+    <p class="note">不订也能进，订了走另一条通道不用排队。都是零元票。</p>
+    <div class="tk">
+      <div class="tkrow">
+        <span class="nm">大英博物馆</span>
+        <span class="pr">£0</span>
+        <p class="de"><b>9月11日 周五晚场。</b>周五开到 20:30，最后入场 20:15。贝叶挂毯特展另收 £25 起，但九月到十二月已全部售罄，只能盯官网放退票。</p>
+        <a class="bk" href="https://www.britishmuseum.org/visit" target="_blank" rel="noopener">britishmuseum.org ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">自然历史博物馆</span>
+        <span class="pr">£0</span>
+        <p class="de"><b>9月13日 周日下午。</b>每天 10:00–17:50，最后入场 17:30。周末会排队，订了免费时段票可以跳过。</p>
+        <a class="bk" href="https://www.nhm.ac.uk/visit.html" target="_blank" rel="noopener">nhm.ac.uk ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp" style="--k:var(--ink-faint)">
+    <h3>想加就加 · 不加也不亏</h3>
+    <div class="tk">
+      <div class="tkrow">
+        <span class="nm">圣保罗大教堂 · 进内参观</span>
+        <span class="pr">£27<small>65+/学生 £24</small></span>
+        <p class="de">9月14日 周一路过。外观和台阶免费，进去才要票。6–17 岁 £10.50。含穹顶 528 级台阶和金廊。腿如果还有力气，这是伦敦最好的俯瞰之一。</p>
+        <a class="bk" href="https://www.stpauls.co.uk/book-tickets" target="_blank" rel="noopener">stpauls.co.uk ↗</a>
+      </div>
+      <div class="tkrow">
+        <span class="nm">塔桥 · 玻璃步道</span>
+        <span class="pr">另收费</span>
+        <p class="de">9月12日 周六路过。走桥面是免费的，上到高处的玻璃步道和维多利亚时代蒸汽机房才要票。行程里排的是走桥，够用了。</p>
+        <a class="bk" href="https://www.towerbridge.org.uk/" target="_blank" rel="noopener">towerbridge.org.uk ↗</a>
+      </div>
+    </div>
+    <div class="total">两个成人、只算「今晚就订」和「现场买也行」两组：大约 <b>£215</b>。加上圣保罗两人再多 <b>£54</b>。伦敦塔如果走 65 岁以上票价，能省 <b>£15</b>。</div>
+  </div>
+
+  <div class="nofee">
+    <b>这些一分钱不要</b>
+    白金汉宫换岗 · 圣詹姆斯公园 · 海德公园 · 特拉法加广场和第四基座 · 国家美术馆（周五开到 21:00）· 柯芬园市集 · 唐人街 · 西敏桥和大本钟外观 · 走塔桥桥面 · Borough Market 进场 · 西敏主教座堂进堂 · V&amp;A · 科学博物馆 · 摄政公园和玫瑰园
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day" id="d1" data-date="2026-09-11" style="--c:var(--l1)">
+  <div class="dayhead"><span class="daynum">DAY 1</span><span class="daydate">9月11日</span><span class="dayweek">FRI</span></div>
+  <p class="daytheme">今天全靠两条腿，Big Bus 一次都别刷——票留到明天中午再激活。西区这一圈本来就是走路最舒服的范围，全天步行不超过 4 公里。</p>
+  <a class="allroute" href="https://www.google.com/maps/dir/?api=1&origin=Buckingham+Palace+London&destination=British+Museum+London&waypoints=St+James%27s+Park+London%7CTrafalgar+Square+London%7CCovent+Garden+London%7CGerrard+Street+Chinatown+London&travelmode=walking" target="_blank" rel="noopener">打开今天全程路线</a>
+
+  <ol class="stops">
+    <li class="stop">
+      <span class="time">10:15</span>
+      <div class="txt">
+        <h4>白金汉宫 · 卫兵换岗<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Buckingham+Palace+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="tube">地铁 Green Park 或 Victoria</span><span class="walk">出站走 8 分钟</span></div>
+        <p class="lede">11:00 正式开始，10:43 就有动作，10:15 到刚好。今天是完整版 Guard Change，苏格兰卫队 F 连接岗，Coldstream 和 Grenadier 两支军乐队。这周只有今天和周一是完整版，周六那场规模小得多。免费，不用票。</p>
+        <div class="heads"><b>站哪儿</b>：维多利亚女王纪念碑台阶视野最全，要早到才抢得到；沿 The Mall 能看军乐队行进过来；Wellington Barracks 铁栅栏外看新岗集合，人最少。</div>
+        <div class="tags"><span class="tag free">免费</span><span class="tag">约 45 分钟</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:00</span>
+      <div class="txt">
+        <h4>穿过圣詹姆斯公园<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=St+James%27s+Park+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 20 分钟</span></div>
+        <p>从宫门口往东走到 Horse Guards，正好把白金汉宫和特拉法加连起来。湖上那群鹈鹕是 1664 年俄国大使送给查理二世那批的后代，下午在 Duck Island 附近喂食。桥中间往回看白金汉宫，是伦敦人自己最爱的角度。</p>
+        <div class="tags"><span class="tag free">免费</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:45</span>
+      <div class="txt">
+        <h4>特拉法加广场 · 午餐 + 第四基座<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Trafalgar+Square+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 5 分钟</span></div>
+        <p>广场西北角那个空了近两百年的基座，9月10日刚换上 Tschabalala Self 的青铜新作《Lady in Blue》，会立到 2028 年夏天，现在全伦敦都还没看过几眼。</p>
+        <p>广场北面是国家美术馆，免费，周五开到 21:00，梵高的《向日葵》和透纳都在里面，进去看两幅就走完全可以。</p>
+        <div class="tags"><span class="tag free">都免费</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">14:30</span>
+      <div class="txt">
+        <h4>柯芬园市集<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Covent+Garden+Market+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 8 分钟</span></div>
+        <p>Apple Market 是手作摊，中庭 Piazza 的街头艺人整点前后开演，地下层有古典乐手在拉琴。这是伦敦唯一由市政厅发牌照的街头表演场地，水准比别处高一截。往北走 6 分钟是 Neal's Yard，被刷成糖果色的小院子，很小但很上照。</p>
+        <div class="tags"><span class="tag free">逛免费</span><span class="tag">2 小时</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">17:00</span>
+      <div class="txt">
+        <h4>唐人街晚餐<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Gerrard+Street+Chinatown+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 8 分钟</span></div>
+        <p>今晚吃早一点，好留出博物馆的时间。</p>
+        <div class="eats">
+          <div class="eat"><span class="n">Four Seasons</span><span class="d">粤菜，招牌烧鹅烧腩，龙虾捞面</span><span class="p">££</span></div>
+          <div class="eat"><span class="n">兰州拉面</span><span class="d">手拉牛腩面，快、便宜、不用久等</span><span class="p">£</span></div>
+          <div class="eat"><span class="n">Leong's Legend</span><span class="d">台式，卤肉饭、三杯鸡</span><span class="p">££</span></div>
+          <div class="eat"><span class="n">唐人街饼屋</span><span class="d">菠萝包芝麻包，带回酒店当早餐</span><span class="p">£</span></div>
+        </div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">19:00</span>
+      <div class="txt">
+        <h4>大英博物馆 · 周五晚场<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=British+Museum+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 15 分钟</span><span class="tube">或 Piccadilly 线 Leicester Sq → Holborn</span></div>
+        <p class="lede">免费。周五开到 20:30，最后入场 20:15，是全周唯一晚场——白天要排的队晚上基本没有。</p>
+        <p>一个多小时够走主线：罗塞塔石碑、帕特农神庙浮雕、埃及木乃伊厅，加上大中庭那片玻璃穹顶。别想看完，没有人看得完。</p>
+        <div class="heads"><b>贝叶挂毯</b>：9月10日刚开幕，这幅十一世纪的织锦九百多年来第一次离开法国。票 £25 起，但九月到十二月已全部售罄，只能盯官网放退票。</div>
+        <a class="bk" href="https://www.britishmuseum.org/visit" target="_blank" rel="noopener">官网订免费票 ↗</a>
+        <div class="tags"><span class="tag free">免费</span><span class="tag">周五 至 20:30</span></div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- DAY 2 -->
+<section class="day" id="d2" data-date="2026-09-12" style="--c:var(--l2)">
+  <div class="dayhead"><span class="daynum">DAY 2</span><span class="daydate">9月12日</span><span class="dayweek">SAT</span></div>
+  <p class="daytheme">教堂、船、市场、桥、巴士、摩天轮，一天把六种走法全用上。中午 12:30 激活 Big Bus，游船券也在今天用掉。</p>
+  <a class="allroute" href="https://www.google.com/maps/dir/?api=1&origin=Westminster+Abbey+London&destination=London+Eye+London&waypoints=Westminster+Pier+London%7CBorough+Market+London%7CTower+Bridge+London&travelmode=transit" target="_blank" rel="noopener">打开今天全程路线</a>
+
+  <ol class="stops">
+    <li class="stop">
+      <span class="time">09:40</span>
+      <div class="txt">
+        <h4>西敏寺 Westminster Abbey<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Westminster+Abbey+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="tube">Jubilee 线 → Westminster</span><span class="walk">出站走 3 分钟</span></div>
+        <p class="lede">票是 10:00 入场，提前 20 分钟到过安检。周一到周六开放，周日只做礼拜不接待游客，所以今天是这趟唯一的机会。</p>
+        <p>门票已经含了回廊 Cloisters、College Garden 花园、Chapter House 议事厅和 Pyx Chamber，很多人不知道就直接走了。花园是伦敦连续耕作了九百多年的一块地，全馆最安静的角落。</p>
+        <div class="heads"><b>值得加的 £5</b>：Queen's Diamond Jubilee Galleries 是单独的定时票，10:00–15:00，在三层中世纪阁楼里，从上往下俯瞰整个中殿——这个角度七百年来只有修士看得到。</div>
+        <a class="bk" href="https://www.westminster-abbey.org/visit-us/prices-and-entry-times" target="_blank" rel="noopener">官网 · 阁楼票 ↗</a>
+        <div class="tags"><span class="tag book">已订 10:00</span><span class="tag">留 2 小时</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:00</span>
+      <div class="txt">
+        <h4>大本钟 · 国会大厦 · 西敏桥<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Westminster+Bridge+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 3 分钟</span></div>
+        <p>出教堂门就是。走到西敏桥中段回头拍，钟楼和整排国会大厦一起入镜，那个最经典的角度就在这儿。整点会敲钟。</p>
+        <div class="tags"><span class="tag free">免费</span><span class="tag">30 分钟</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:30</span>
+      <div class="txt">
+        <h4>⚡ 在这里激活 Big Bus<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Westminster+Pier+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">桥下就是西敏码头</span></div>
+        <p class="lede">打开 Big Bus app，输入订单号，按 Activate。48 小时从这一刻起算，到周一 12:30 结束。西敏码头是红线和蓝线共用的站点，也是游船券的上船点，所以在这里开始最划算。</p>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:45</span>
+      <div class="txt">
+        <h4>游船 · 西敏码头 → 塔桥码头<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Westminster+Pier+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="boat">单程券 · 约 40 分钟</span></div>
+        <p class="lede">给 City Cruises 的工作人员看一眼 Big Bus 的票就能上，不用换实体票。这张券只能坐一次，坐完就没了，所以别浪费在往返上——今天这一趟正好是顺路的那一程，从西边一路开到东边，国会大厦、伦敦眼、圣保罗、碎片大厦、塔桥依次从两边过去。</p>
+        <p>坐上层甲板，风大但值。九月的淡季末班很早，所以这一趟安排在中午，别留到傍晚。</p>
+        <div class="tags"><span class="tag">票里已含</span><span class="tag">只能坐一次</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">13:40</span>
+      <div class="txt">
+        <h4>Borough Market 午餐<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Borough+Market+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">从塔桥码头沿河走 15 分钟</span></div>
+        <p class="lede">周六 9:00–17:00，是一周里摊位最齐也最挤的一天。这个市场在这个位置卖了一千年东西。</p>
+        <div class="eats">
+          <div class="eat"><span class="n">Kappacasein</span><span class="d">烤芝士三明治，全场排最长队那摊</span><span class="p">£</span></div>
+          <div class="eat"><span class="n">Bread Ahead</span><span class="d">现炸吉事果和奶油甜甜圈</span><span class="p">£</span></div>
+          <div class="eat"><span class="n">Padella</span><span class="d">手擀意面，队长但翻台快</span><span class="p">££</span></div>
+          <div class="eat"><span class="n">生蚝摊</span><span class="d">论只买，站着吃</span><span class="p">££</span></div>
+        </div>
+        <div class="tags"><span class="tag free">进场免费</span><span class="tag">周一闭市</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">15:00</span>
+      <div class="txt">
+        <h4>塔桥 Tower Bridge<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Tower+Bridge+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 12 分钟</span></div>
+        <p>桥面人行道免费，走到桥中间朝西看，伦敦塔和碎片大厦一起在画面里。上塔顶玻璃步道要另外买票。</p>
+        <div class="tags"><span class="tag free">走桥免费</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">15:45</span>
+      <div class="txt">
+        <h4>红线 · 伦敦塔站上车，绕城看黄昏<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Tower+of+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-r">红线 · 一圈 2.5 小时</span></div>
+        <p class="lede">坐敞篷上层，从东往西一路开回市中心，圣保罗、柯芬园、特拉法加、白金汉宫依次过。腿也歇了，票也开始回本了。</p>
+        <div class="heads"><b>今天两个坑</b>：24 号站 College Green 因修路停用；今天 15:00 白金汉宫有 Captain's Inspection，那个时段 26 号站不停靠。红线末班 17:45 从 Hard Rock Cafe 发，别赶太晚。</div>
+        <a class="bk" href="https://www.bigbustours.com/en/london/service-information" target="_blank" rel="noopener">官网 · 当日站点变动 ↗</a>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">18:30</span>
+      <div class="txt">
+        <h4>伦敦眼 · 看日落<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=London+Eye+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-r">红线 London Eye 站下</span></div>
+        <p class="lede">今天日落 19:23。转一圈 30 分钟，所以订 18:45 到 19:15 之间的时段最好——上去时天还亮着，下来时整座城的灯正好亮起来，国会大厦在河对岸整个金色。</p>
+        <p>要提前订，现场买贵且要排队。周六傍晚是最热门的时段，今晚就得订。</p>
+        <a class="bk" href="https://www.londoneye.com/" target="_blank" rel="noopener">官网订票 ↗</a>
+        <div class="tags"><span class="tag book">今晚就订</span><span class="tag">一圈 30 分钟</span></div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- DAY 3 -->
+<section class="day" id="d3" data-date="2026-09-13" style="--c:var(--l3)">
+  <div class="dayhead"><span class="daynum">DAY 3</span><span class="daydate">9月13日</span><span class="dayweek">SUN</span></div>
+  <p class="daytheme">蓝线的主场。妈妈清单里的西南一线——海德公园、惠灵顿拱门、南肯辛顿三馆、Harrods——全在这一条线上，而且今天 South Kensington 的地铁停运，巴士反而是最好的走法。</p>
+  <a class="allroute" href="https://www.google.com/maps/dir/?api=1&origin=Westminster+Cathedral+London&destination=Natural+History+Museum+London&waypoints=Wellington+Arch+London%7CHard+Rock+Cafe+150+Old+Park+Lane+London&travelmode=transit" target="_blank" rel="noopener">打开今天全程路线</a>
+
+  <ol class="stops">
+    <li class="stop">
+      <span class="time">10:00</span>
+      <div class="txt">
+        <h4>西敏主教座堂 Westminster Cathedral<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Westminster+Cathedral+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="tube">Victoria 线 → Victoria</span><span class="walk">出站走 5 分钟</span></div>
+        <p class="lede">这就是妈妈清单里的另一个"西敏"。拜占庭风格的红白条纹砖砌教堂，跟西敏寺完全不是一个路子，进去免费。里面的马赛克是一百多年来一块一块慢慢贴的，到现在还没贴完，上半部分还是裸砖。</p>
+        <div class="heads"><b>钟楼电梯</b>：£10（优惠票 £5，家庭票 £22），坐电梯直上 64 米，能看到白金汉宫和整个 Victoria 一带，不用爬楼梯。票在教堂商店买，周三到周日 10:30–16:30。今天开。</div>
+        <a class="bk" href="https://westminstercathedral.org.uk/the-cathedral/tours/" target="_blank" rel="noopener">官网 ↗</a>
+        <div class="tags"><span class="tag free">进堂免费</span><span class="tag">钟楼 £10</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">11:15</span>
+      <div class="txt">
+        <h4>蓝线 · Victoria 上车<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Nova+Victoria+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-b">蓝线 · Victoria (Nova Complex) 站</span></div>
+        <p class="lede">蓝线首班 10:34 才从这里发，所以今天上午先安排了教堂，时间正好接上。这条线一圈 3.5 小时，每 20 分钟一班，末班 20:08 回到 Victoria。今天基本不用下车换地铁了。</p>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">11:45</span>
+      <div class="txt">
+        <h4>惠灵顿拱门 + 海德公园<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Wellington+Arch+Hyde+Park+Corner+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-b">蓝线 Hyde Park Corner 站下</span></div>
+        <p class="lede">妈妈说的 Wellington Monument，在伦敦最可能指的是这座 <strong>Wellington Arch 惠灵顿拱门</strong>，就杵在海德公园角的环岛中间，顶上那组四马战车是全英国最大的青铜雕塑。English Heritage 管理，成人 £6.80、优惠票 £5.90、5–17 岁 £3.60，可以上到内部观景台平视白金汉宫花园。</p>
+        <p>拱门旁边就是海德公园的东南角，Queen Mother Gates 进去，沿 Serpentine 湖走一段。九月的草地还是绿的，天鹅和野雁到处都是。</p>
+        <div class="heads"><b>它只有周三到周日开</b>，10:00–17:00，周一周二关门。所以这一站挪不到别天，今天不去就没机会了。<br><b>另外</b>：圣保罗大教堂里面也有一座叫 Wellington Monument 的纪念碑，是公爵的墓和雕像。跟妈妈确认她想看的是哪个——如果是圣保罗那座，周一正好经过。</div>
+        <a class="bk" href="https://www.english-heritage.org.uk/visit/places/wellington-arch/prices-and-opening-times-at-wellington-arch/" target="_blank" rel="noopener">官网订票 ↗</a>
+        <div class="tags"><span class="tag book">£6.80 / £5.90</span><span class="tag">周一周二闭馆</span><span class="tag free">公园免费</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">13:15</span>
+      <div class="txt">
+        <h4>Hard Rock Cafe 午餐<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Hard+Rock+Cafe+150+Old+Park+Lane+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">从海德公园角走 5 分钟</span></div>
+        <p class="lede">150 Old Park Lane，就在海德公园角旁边，位置刚刚好。这家是全世界第一家 Hard Rock Cafe，1971 年开的，地下室那个 Vault 里存着 Jimi Hendrix 和 The Beatles 的东西，免费参观。</p>
+        <p>它同时是 Big Bus <strong>红线的 2 号站，也是起点站</strong>，蓝线也停这儿。所以吃完饭想换线、想加一段红线，都在门口解决。周末中午会排队，建议提前在官网订位。</p>
+        <div class="tags"><span class="tag book">建议订位</span><span class="tag">红线起点 · 蓝线也停</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">14:45</span>
+      <div class="txt">
+        <h4>蓝线 → 南肯辛顿博物馆区<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Natural+History+Museum+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-b">蓝线 South Kensington Museums 站</span></div>
+        <p>中间会经过 Harrods，想逛就在那站下，逛完再上下一班。蓝线每 20 分钟一班，跳站很自由，这正是 48 小时票该发挥的地方。</p>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">15:15</span>
+      <div class="txt">
+        <h4>自然历史博物馆<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Natural+History+Museum+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">下车即到</span></div>
+        <p class="lede">免费。每天 10:00–17:50，最后入场 17:30。那栋维多利亚建筑本身就是展品，被称作"自然的大教堂"，进门 Hintze Hall 挂着一整具蓝鲸骨架从天花板俯冲下来。</p>
+        <p>周末会排队，官网可以订免费时段票跳过队伍。恐龙厅、地球厅（坐扶梯穿过一个巨大的地球仪进去）、矿物厅是主线，两个半小时够。</p>
+        <a class="bk" href="https://www.nhm.ac.uk/visit.html" target="_blank" rel="noopener">官网订免费票 ↗</a>
+        <div class="tags"><span class="tag free">免费</span><span class="tag">最后入场 17:30</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">17:00</span>
+      <div class="txt">
+        <h4>V&amp;A 或 科学博物馆<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Victoria+and+Albert+Museum+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">都在隔壁，走 3–5 分钟</span></div>
+        <p>三馆挨在一条街上，都免费。V&amp;A 是装饰艺术、服装、珠宝，周日开到 17:45；科学博物馆偏互动，小孩多。今天 9月12–20 是 London Design Festival，V&amp;A 是主会场之一，馆内摆着几件大型装置，全部免费。</p>
+        <p>不过看完自然历史博物馆多半已经累了，这一站是有余力才去，走不动就直接上蓝线回市中心。</p>
+        <div class="tags"><span class="tag free">免费</span><span class="tag">有余力再去</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">18:00</span>
+      <div class="txt">
+        <h4>蓝线回市中心<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Piccadilly+Circus+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-b">蓝线 · 末班 20:08</span></div>
+        <p>回程会经过肯辛顿宫、诺丁山、帕丁顿、贝克街一线，傍晚的光打在那些白色排屋上很好看，坐在上层当免费观光就行。想在哪站下吃晚饭都可以。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- DAY 4 -->
+<section class="day" id="d4" data-date="2026-09-14" style="--c:var(--l4)">
+  <div class="dayhead"><span class="daynum">DAY 4</span><span class="daydate">9月14日</span><span class="dayweek">MON</span></div>
+  <p class="daytheme">Big Bus 12:30 到期，上午最后榨一次红线，下午转地铁去贝克街。今天 25°C，这周最暖；District 和 Circle 线也恢复正常了。</p>
+  <a class="allroute" href="https://www.google.com/maps/dir/?api=1&origin=Tower+of+London&destination=Sherlock+Holmes+Museum+221b+Baker+Street+London&waypoints=St+Paul%27s+Cathedral+London&travelmode=transit" target="_blank" rel="noopener">打开今天全程路线</a>
+
+  <ol class="stops">
+    <li class="stop">
+      <span class="time">09:00</span>
+      <div class="txt">
+        <h4>伦敦塔 Tower of London<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Tower+of+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="tube">Circle / District 线 → Tower Hill（今天恢复）</span></div>
+        <p class="lede">开门就进，直奔王冠珠宝——晚一个小时，队伍能长出去几十米。整个塔至少留 3 小时。</p>
+        <p>成人 £37（含自愿捐赠 £40.70），65 岁以上 £29.50（£32.50），5–15 岁 £18.50。现场和网上同价，但务必提前订好时段。</p>
+        <div class="heads"><b>别错过</b>：Yeoman Warder（"食牛肉者"，穿深蓝红边制服那些人）的免费导览每半小时一场，从入口出发，一小时。他们全是服役满 22 年的退伍军人，讲得比任何语音导览都好，而且是黑色幽默。</div>
+        <a class="bk" href="https://www.hrp.org.uk/tower-of-london/visit/tickets-and-prices/" target="_blank" rel="noopener">官网订票 ↗</a>
+        <div class="tags"><span class="tag book">今晚就订</span><span class="tag">£37 / £29.50</span><span class="tag">留 3 小时</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:05</span>
+      <div class="txt">
+        <h4>红线 · 最后一程<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=St+Paul%27s+Cathedral+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="bus-r">红线 · 12:30 到期前刷完</span></div>
+        <p class="lede">伦敦塔站上车往西，20 分钟到圣保罗。这是 48 小时票的最后一次使用，卡着点用掉，一分钱不浪费。</p>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">12:30</span>
+      <div class="txt">
+        <h4>圣保罗大教堂 + 午餐<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=St+Paul%27s+Cathedral+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">下车即到</span></div>
+        <p>外观和台阶不要钱，进去参观要门票。教堂内部有一座 <strong>Wellington Monument</strong>——如果妈妈说的是这个，今天正好补上。想上穹顶得爬 528 级，最上面的金廊能看整个伦敦。</p>
+        <p>午餐往东走 10 分钟到 Leadenhall Market：维多利亚时代的玻璃拱廊，酒红配金色，哈利波特第一部的对角巷在这儿取景。只在周一到周五营业，今天是最后机会。</p>
+        <div class="tags"><span class="tag free">外观免费</span><span class="tag">利德贺仅工作日</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">14:15</span>
+      <div class="txt">
+        <h4>地铁去贝克街<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Baker+Street+Station+London&travelmode=transit" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="tube">Circle 线 直达 · 约 20 分钟</span></div>
+        <p>Big Bus 已经过期，这段走地铁。圣保罗那边上 Circle 线（今天恢复正常），一趟直达 Baker Street，不用换乘。顺便说，蓝线其实也到贝克街——如果你们想把这段也用巴士，那就得把 48 小时的起点往后挪，但那样周六的船和红线就吃不到了，不划算。</p>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">14:45</span>
+      <div class="txt">
+        <h4>夏洛克·福尔摩斯博物馆<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Sherlock+Holmes+Museum+221b+Baker+Street+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">出站走 4 分钟</span></div>
+        <p class="lede">地址是 <strong>221b Baker Street</strong>，不是 46 号——小说里福尔摩斯的门牌就是 221b，博物馆专门把这个号买了下来。每天 9:30–18:00，最后入场 17:30。成人 £19，优惠票 £17，16 岁以下 £14。</p>
+        <p>房子按小说描写复原成 1890 年代的样子，一层是纪念品店（不用票也能进），楼上四层是起居室、卧室、蜡像场景。楼梯很窄很陡，人多的时候要排队上楼。门口有穿制服的警察站岗可以合影，是免费的。</p>
+        <a class="bk" href="https://www.sherlock-holmes.co.uk/plan-your-visit/" target="_blank" rel="noopener">官网订票 ↗</a>
+        <div class="tags"><span class="tag book">£19 / £17</span><span class="tag">最后入场 17:30</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <span class="time">16:15</span>
+      <div class="txt">
+        <h4>贝克街一带 · 最后半天<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Regent%27s+Park+London&travelmode=walking" target="_blank" rel="noopener">导航</a></h4>
+        <div class="go"><span class="walk">走 5–10 分钟</span></div>
+        <p>博物馆隔壁就是杜莎夫人蜡像馆（要票，很贵，人很多）。往北走 5 分钟是摄政公园，里面的 Queen Mary's Gardens 有全伦敦最大的玫瑰园，九月还有花。</p>
+        <p>最后一顿可以就在 Marylebone High Street 一带，那条街是伦敦人自己逛的，独立小店和餐厅，比游客区舒服。</p>
+        <div class="tags"><span class="tag free">公园免费</span></div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="todo">
+  <h2>待办</h2>
+  <p class="sub">办完一项告诉我，我改页面。红点是今晚就得做的。</p>
+  <ul class="tdlist">
+    <li class="urgent"><b>订伦敦眼 9月12日傍晚 18:45–19:15 的票</b>，£29 起，现场买要 £39，日落 19:23</li>
+    <li class="urgent"><b>订伦敦塔 9月14日 09:00 的票</b>，成人 £37、65 岁以上 £29.50</li>
+    <li class="urgent"><b>下载 Big Bus app 并输入订单号</b>，但<b>先别按 Activate</b>，等周六中午 12:30 在西敏码头再按</li>
+    <li class="urgent"><b>订 Hard Rock Cafe 周日中午的位子</b>，周末会排队，订位免费</li>
+    <li><b>跟妈妈确认 Wellington Monument 是哪一座</b>，海德公园角的拱门还是圣保罗里的纪念碑，两个行程里都留了位置</li>
+    <li><b>订自然历史博物馆和大英博物馆的免费时段票</b>，不订也能进，订了不用排队</li>
+    <li><b>确认西敏寺要不要加 £5 的阁楼票</b>，单独定时票，10:00–15:00</li>
+    <li><b>把这一页存到手机主屏</b>，Safari 分享菜单选「添加到主屏幕」，地铁里没信号也能看</li>
+  </ul>
+</section>
+
+<section class="facts">
+  <h2>路上会用到的</h2>
+  <p class="sub">出门前扫一眼，尤其前三条。</p>
+  <dl class="kv">
+    <div><dt>坐车付钱</dt><dd>不用买 Oyster 卡。<b>直接刷银行卡或手机</b>进出闸机，同一张卡自动算每日和每周封顶。<b>两个人必须各刷各的卡</b>，一张卡刷两次会被当成逃票。公交车只收刷卡，不收现金。Big Bus 是另一套系统，跟这个无关。</dd></div>
+    <div><dt>Big Bus</dt><dd>上下车不限次数，48 小时内红蓝绿三线随便换。上车时给司机或工作人员看 app 里的票。上层没有顶，风大，备件外套。堵车时它比地铁慢得多，赶时间就别指望它。</dd></div>
+    <div><dt>扶梯</dt><dd>站右边，左边留给走路的人。这条在伦敦是铁律，站错边会被推。</dd></div>
+    <div><dt>小费</dt><dd>餐厅账单常已含 12.5% service charge，含了就不用再给。没含的话留 10–12.5%。咖啡馆、外带、酒吧一律不用。</dd></div>
+    <div><dt>厕所</dt><dd>街上免费厕所很少。博物馆、大百货（John Lewis、Selfridges、Harrods、Fortnum &amp; Mason）、Waterstones 书店最可靠，都免费。</dd></div>
+    <div><dt>插头</dt><dd>Type G 三方脚，230V。酒店前台一般能借到转换头。</dd></div>
+    <div><dt>紧急电话</dt><dd><b>999</b>：急救、警察、消防。<b>111</b>：非紧急医疗咨询，免费，24 小时，有中文口译。</dd></div>
+    <div><dt>随身</dt><dd>薄外套、充电宝、一把折伞。地铁里没信号，出门前先把这页加到主屏。</dd></div>
+  </dl>
+  <footer>
+    <span>信息核对于 2026年9月10日</span>
+    <span>票价与开放时间出发前再确认一次</span>
+  </footer>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var EV = [
+    {t:'2026-09-11T10:15:00+01:00', n:'白金汉宫 · 卫兵换岗', d:'周五'},
+    {t:'2026-09-11T12:45:00+01:00', n:'特拉法加广场 · 午餐', d:'周五'},
+    {t:'2026-09-11T14:30:00+01:00', n:'柯芬园市集', d:'周五'},
+    {t:'2026-09-11T17:00:00+01:00', n:'唐人街晚餐', d:'周五'},
+    {t:'2026-09-11T19:00:00+01:00', n:'大英博物馆 · 周五晚场', d:'周五'},
+    {t:'2026-09-12T09:40:00+01:00', n:'西敏寺 · 10:00 入场', d:'周六'},
+    {t:'2026-09-12T12:00:00+01:00', n:'大本钟 · 西敏桥', d:'周六'},
+    {t:'2026-09-12T12:30:00+01:00', n:'⚡ 激活 Big Bus 48 小时', d:'周六'},
+    {t:'2026-09-12T12:45:00+01:00', n:'游船 · 西敏码头 → 塔桥码头', d:'周六'},
+    {t:'2026-09-12T13:40:00+01:00', n:'Borough Market 午餐', d:'周六'},
+    {t:'2026-09-12T15:00:00+01:00', n:'塔桥', d:'周六'},
+    {t:'2026-09-12T15:45:00+01:00', n:'红线 · 绕城看黄昏', d:'周六'},
+    {t:'2026-09-12T18:30:00+01:00', n:'伦敦眼 · 看日落', d:'周六'},
+    {t:'2026-09-13T10:00:00+01:00', n:'西敏主教座堂', d:'周日'},
+    {t:'2026-09-13T11:15:00+01:00', n:'蓝线 · Victoria 上车', d:'周日'},
+    {t:'2026-09-13T11:45:00+01:00', n:'惠灵顿拱门 + 海德公园', d:'周日'},
+    {t:'2026-09-13T13:15:00+01:00', n:'Hard Rock Cafe 午餐', d:'周日'},
+    {t:'2026-09-13T15:15:00+01:00', n:'自然历史博物馆', d:'周日'},
+    {t:'2026-09-13T17:00:00+01:00', n:'V&A 或 科学博物馆', d:'周日'},
+    {t:'2026-09-14T09:00:00+01:00', n:'伦敦塔', d:'周一'},
+    {t:'2026-09-14T12:05:00+01:00', n:'红线 · 最后一程', d:'周一'},
+    {t:'2026-09-14T12:30:00+01:00', n:'圣保罗大教堂 + 午餐', d:'周一'},
+    {t:'2026-09-14T14:45:00+01:00', n:'夏洛克·福尔摩斯博物馆', d:'周一'},
+    {t:'2026-09-14T16:15:00+01:00', n:'贝克街一带 · 最后半天', d:'周一'}
+  ];
+  for (var i=0;i<EV.length;i++){ EV[i].ms = new Date(EV[i].t).getTime(); }
+
+  var card=document.getElementById('nowcard'),
+      elEv=document.getElementById('nowEv'), elWhen=document.getElementById('nowWhen'),
+      cd=document.getElementById('nowCd'),
+      D=document.getElementById('cdD'), H=document.getElementById('cdH'),
+      M=document.getElementById('cdM'), S=document.getElementById('cdS');
+
+  function two(n){ return n<10 ? '0'+n : ''+n; }
+
+  function tick(){
+    var now = Date.now(), nxt = null;
+    for (var i=0;i<EV.length;i++){ if (EV[i].ms > now){ nxt = EV[i]; break; } }
+    if (!nxt){
+      card.classList.add('over');
+      card.querySelector('.lbl').textContent = '行程结束';
+      elEv.textContent = '四天走完了';
+      elWhen.textContent = '希望妈妈玩得开心';
+      cd.hidden = true;
+      return;
+    }
+    var diff = nxt.ms - now, s = Math.floor(diff/1000),
+        d = Math.floor(s/86400), h = Math.floor(s%86400/3600),
+        m = Math.floor(s%3600/60), sec = s%60;
+    elEv.textContent = nxt.n;
+    var loc = new Date(nxt.ms).toLocaleTimeString('zh-CN',
+      {timeZone:'Europe/London', hour:'2-digit', minute:'2-digit', hour12:false});
+    elWhen.textContent = nxt.d + ' ' + loc + ' 伦敦时间';
+    D.textContent = d; H.textContent = two(h); M.textContent = two(m); S.textContent = two(sec);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  var f = new Intl.DateTimeFormat('en-CA',
+    {timeZone:'Europe/London', year:'numeric', month:'2-digit', day:'2-digit'});
+  var iso = f.format(new Date());
+  var sec2 = document.querySelector('.day[data-date="'+iso+'"]');
+  if (sec2){
+    sec2.classList.add('today');
+    var tag = document.createElement('span');
+    tag.className = 'todaytag'; tag.textContent = '今天';
+    sec2.querySelector('.dayhead').appendChild(tag);
+  }
+  var lk = document.querySelector('.daylink[data-date="'+iso+'"]');
+  if (lk) lk.classList.add('on');
+})();
+</script>
+</body>
+</html>
